@@ -1,6 +1,6 @@
 <h1>Create new post</h1>
 
-<%= form_for :post do |f| %>
+<%= form_for :post, url: posts_path do |f| %>
 
   <p>
     <%= f.text_field :title, :placeholder => 'Title' %>
