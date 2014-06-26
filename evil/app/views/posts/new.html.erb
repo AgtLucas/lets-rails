@@ -1,1 +1,17 @@
 <h1>Create new post</h1>
+
+<%= form_for :post do |f| %>
+
+  <p>
+    <%= f.text_field :title, :placeholder => 'Title' %>
+  </p>
+
+  <p>
+    <%= f.text_area :text, :placeholder => 'Your thoughts...' %>
+  </p>
+
+  <p>
+    <%= f.button %>
+  </p>
+
+<% end %>
