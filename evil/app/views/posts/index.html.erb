@@ -2,7 +2,7 @@
 
 <%= link_to "New Post", new_post_path  %>
 
-<%  @posts.each do |post| %>
+<% @posts.each do |post| %>
 <article class="post">
   <h2 class="post-title"><a href="<%= post.id %>"><%= post.title %></a></h2>
   <div class="post-content">
