@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica;
+}
+
+.main-content {
+  width: 600px;
+  max-width: 100%;
+  margin: auto;
+}
