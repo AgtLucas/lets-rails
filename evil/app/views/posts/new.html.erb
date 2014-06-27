@@ -2,6 +2,17 @@
 
 <%= form_for :post, url: posts_path do |f| %>
 
+  <% if @post.errors.any? %>
+    <div class="errors-info">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <ul class="errors-list">
+        <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <p>
     <%= f.text_field :title, :placeholder => 'Title' %>
   </p>
