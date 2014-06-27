@@ -2,7 +2,7 @@
 
 <%  @posts.each do |post| %>
 <article class="post">
-  <h2><%= post.title %></h2>
+  <h2 class="post-title"><a href="<%= post.id %>"><%= post.title %></a></h2>
   <div class="post-content">
     <%= post.text %>
   </div>
