@@ -19,12 +19,7 @@
 
 <h2>Comments</h2>
 
-<% @post.comments.each do |comment| %>
-  <strong><%= comment.commenter %></strong>
-  <div class="comment-content">
-    <%= comment.body %>
-  </div>
-<% end %>
+<%= render @post.comments %>
 
 <%= link_to "Back", posts_path, :class => 'go-back' %> |
 <%= link_to 'Edit', edit_post_path(@post) %>
