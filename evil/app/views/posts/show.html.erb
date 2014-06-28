@@ -1,5 +1,21 @@
 <p><strong><%= @post.title %></strong></p>
 <p><%= @post.text %></p>
 
+<h2>Add a comment:</h2>
+
+<%= form_for([@post, @post.comments.build]) do |f| %>
+  <p>
+    <%= f.text_field :commenter, :placeholder => 'Commenter' %>
+  </p>
+
+  <p>
+    <%= f.text_area :body, :placeholder => 'Your comment...' %>
+  </p>
+
+  <p>
+    <%= f.button %>
+  </p>
+<% end %>
+
 <%= link_to "Back", posts_path, :class => 'go-back' %> |
 <%= link_to 'Edit', edit_post_path(@post) %>
