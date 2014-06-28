@@ -1,28 +1,5 @@
 <h1>Editing post</h1>
 
-<%= form_for :post, url: post_path(@post), method: :path do |f| %>
-  <% if @post.errors.any? %>
-    <div class="errors-info">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-      <ul class="errors-list">
-        <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <p>
-    <%= f.text_field :title, :placeholder => 'Title' %>
-  </p>
-
-  <p>
-    <%= f.text_area :text, :placeholder => 'Your thoughts...' %>
-  </p>
-
-  <p>
-    <%= f.button %>
-  </p>
-<% end %>
+<%= render 'form' %>
 
 <%= link_to "Back", posts_path %>
