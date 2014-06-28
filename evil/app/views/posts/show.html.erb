@@ -3,19 +3,7 @@
 
 <h2>Add a comment:</h2>
 
-<%= form_for([@post, @post.comments.build]) do |f| %>
-  <p>
-    <%= f.text_field :commenter, :placeholder => 'Commenter' %>
-  </p>
-
-  <p>
-    <%= f.text_area :body, :placeholder => 'Your comment...' %>
-  </p>
-
-  <p>
-    <%= f.button %>
-  </p>
-<% end %>
+<%= render 'comments/form' %>
 
 <h2>Comments</h2>
 
