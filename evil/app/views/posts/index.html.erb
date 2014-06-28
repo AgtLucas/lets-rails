@@ -8,6 +8,7 @@
   <div class="post-content">
     <%= post.text %>
   </div>
-  <small><%= link_to 'Edit post', edit_post_path(post) %></small>
+  <small><%= link_to 'Edit post', edit_post_path(post) %></small> |
+  <small><%= link_to 'Destroy post', post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %></small>
 </article>
 <% end %>
