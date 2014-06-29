@@ -2,3 +2,4 @@
 <div class="comment-content">
   <%= comment.body %>
 </div>
+<small><%= link_to 'Delete Comment', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' }, :class => 'delete-comment' %></small><br>
