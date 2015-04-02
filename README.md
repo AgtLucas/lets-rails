@@ -1,4 +1,0 @@
-lets-rails
-==========
-
-Rails!
